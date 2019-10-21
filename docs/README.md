@@ -1,4 +1,4 @@
-![me](E:\Code\web\weijing\docs\img\me.JPG)
+![me](img\me.JPG)
 
 - - 个人信息
 
