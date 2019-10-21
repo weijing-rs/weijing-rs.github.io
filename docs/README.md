@@ -1,4 +1,4 @@
-![me](img\me.JPG)
+![me](docs\img\me.JPG)
 
 - - 个人信息
 
