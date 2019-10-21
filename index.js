@@ -3,6 +3,7 @@
 new Docute({
   // 渲染md文档的div
   target: '#docute',
+  darkThemeToggler:true,
   // md文档目录
   sourcePath: './docs/',
   // 导航栏
