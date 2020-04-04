@@ -43,15 +43,14 @@ code {
 }
 .header .desc {
   margin: 0.5em 0 0.25em;
-  font: 18px Lora;
   color: #bbb;
 }
 .header .links {
-  height: 40px;
+  height: 50px;
   margin: 2.25em auto 4.5em;
   border-top: 1px dashed #ddd;
   border-bottom: 1px dashed #ddd;
-  font: 700 13px Lato-Bold;
+  font: 700 15px Lato-Bold;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
