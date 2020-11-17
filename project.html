@@ -54,19 +54,20 @@
       <li><p><strong>Estimation of near-surface fine particles</strong></p>
         <p><strong>Space-Time Extremely randomized Trees (STET) model</strong></p>
         <p>We have developed a new space–time extremely randomized trees (STET) model by integrating spatiotemporal information and additional auxiliary 
-          data (including AOD, meteorological, topographical and land-use data and pollution emissions) to improve the spatial resolution and overall accuracy
+          data (including AOD, meteorological, topographical, land-use data and pollution emissions) to improve the spatial resolution and overall accuracy
           of PM estimates across China. Based on this model, we have generated long-term, high-resolution and high-quality near-surface fine particle (e.g., PM<sub>1</sub>, PM<sub>2.5</sub>, PM<sub>10</sub>), 
           in China, i.e., ChinaHighPM<sub>x</sub> dataset. This dataset will be useful in future atmospheric pollution studies focused on medium- or small-scale areas.</p> 
         <p>Reference: </p>
         <p>[1] Wei, J., Li, Z., Lyapustin, A., Sun, L., Peng, Y., Xue, W., Su, T., and Cribb, M. Reconstructing 1-km-resolution high-quality PM<sub>2.5</sub> data records from 2000 to 2018 in China: spatiotemporal variations and policy implications. <em>Remote Sensing of Environment</em>, 2021, 252, 112136. <a href='https://doi.org/10.1016/j.rse.2020.112136' target='_blank' class='url'>https://doi.org/10.1016/j.rse.2020.112136</a></p>
         <p>[2] Wei, J., Li, Z., Cribb, M., Huang, W., Xue, W., Sun, L., Guo, J., Peng, Y., Li, J., Lyapustin, A., Liu, L., Wu, H., and Song, Y. Improved 1 km resolution PM<sub>2.5</sub> estimates across China using enhanced space-time extremely randomized trees. <em>Atmospheric Chemistry and Physics</em>, 2020, 20, 3273–3289. <a href='https://doi.org/10.5194/acp-20-3273-2020' target='_blank' class='url'>https://doi.org/10.5194/acp-20-3273-2020</a> </p>
         <p>[3] Wei, J., Li, Z., Guo, J., Sun, L., Huang, W., Xue, W., Fan, T, and Cribb, M. Satellite-derived 1-km-resolution PM<sub>1</sub> concentrations from 2014 to 2018 across China. <em>Environmental Science &amp; Technology</em>, 2019, 53(22), 13265-13274. <a href='https://doi.org/10.1021/acs.est.9b03258' target='_blank' class='url'>https://doi.org/10.1021/acs.est.9b03258</a></p>
+        <p>[4] Wei, J., Li, Z., Xue, W., Sun, L., Fan, T., Liu, L., Su, T., and Cribb, M. The PM<sub>10</sub> dataset: generation, validation, and spatiotemporal variations. <em>Environment International</em>, 2021, x, x. <a href='https://doi.org/10.1021/acs.est.9b03258' target='_blank' class='url'>https://doi.org/10.1021/acs.est.9b03258</a></p>
         <p>&nbsp;</p>
       </li>
       
       <li><p><strong>Aerosol optical depth retrieval</strong></p>
         <p><strong>(1) RRHA algorithm</strong></p>
-        <p>We have developed a regionally robust high-resolution aerosol retrieval algorithm for different satellites (e.g., Landsat, MODIS, VIIRS, et al.) 
+        <p>We have developed a regionally robust high-resolution aerosol retrieval (RRHA) algorithm for different satellites (e.g., Landsat, MODIS, VIIRS, et al.) 
           over Eastern China which has complex surfaces and severe air pollution by solving several major challenges in  aerosol retrieval including: i) surface reflectance
           by correcting for the effects of surface bidirectional reflectance distribution function using the RossThick-LiSparse model; ii) aerosol models assumed by time-series 
           data analysis with historical aerosol optical properties measurements; iii) cloud screening using our proposed more accurate cloud mask algorithms; and iv) gas (i.e., ozone and water vapor) absorption
@@ -82,7 +83,7 @@
           high-resolution aerosol retrieval algorithm with a priori land surface reflectance database support (HARLS),
           which was developed over bright urban areas and was subsequently modified and validated over land. For
           this study, an eight-day surface reflectance database and a seasonal aerosol-type database over land are
-          constructed using the MODIS surface reflectance and aerosol products. Then, the 1-km global AOD dataset is first generated. 
+          constructed using the MODIS surface reflectance and aerosol products. Then, the 1 km resolution global AOD dataset is first generated. 
           This dataset can be used for air-pollution- and climate-related studies at medium or small scales.</p>     
         <p>Reference: </p>
         <p>[1] Wei, J., Sun, L., Peng, Y., Wang, L., Zhang, Z., Bilal, M., and Ma., Y. An improved high-spatial-resolution aerosol retrieval algorithm for MODIS images over land. <em>Journal of Geophysical Research Atmospheres</em>, 2018, 123(21), 12291–12307. <a href='https://doi.org/10.1029/2017JD027795' target='_blank' class='url'>https://doi.org/10.1029/2017JD027795</a></p>
@@ -92,7 +93,7 @@
   
       <li><p><strong>Cloud detection for remote sensing images</strong></p>
         <p><strong>(1) RFmask algorithm</strong></p>
-        <p>we developed a new algorithm called the Random-Forest-based cloud mask (RFmask), which can improve the accuracy of cloud identifcation from
+        <p>we have developed a new algorithm called the Random-Forest-based cloud mask (RFmask), which can improve the accuracy of cloud identifcation from
           different Landsat images (e.g., TM, ETM+, and OLI). We frst chose the stratifed sampling method to pre-select cloudy and clear-sky pixels to form a prior-pixel database according
           to the land use cover around the world. Next, we select typical spectral channels and calculate spectral indices as inputs to the RF model for training and establishing
           a preliminary cloud detection model. Finally, the Super-pixels Extracted via Energy-Driven Sampling (SEEDS) segmentation approach is applied to re-process the preliminary classifcation results 
