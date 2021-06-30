@@ -12,9 +12,9 @@ PRO nc2tif
   out_dir = 'D:\xx\'
 
   ;Define the air pollutant (e.g., PM1, PM2.5, PM10, O3, NO2, SO, and CO)
-  AP = 'O3'
-  ;Define the spatial resolution (e.g.,0.1°*0.1°)
-  SP = 0.1
+  AP = 'PM2.5'
+  ;Define the spatial resolution (e.g.,0.01°*0.01°)
+  SP = 0.01
 
   Files = FILE_SEARCH(WorkDir + '*.nc');
   N = N_ELEMENTS(Files)
