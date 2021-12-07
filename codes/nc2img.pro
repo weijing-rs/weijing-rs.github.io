@@ -1,7 +1,7 @@
 ;+
 ; :Author: Dr. Jing Wei (Email: weijing_rs@163.com)
 ;-
-PRO nc2tif
+PRO nc2img
 
   COMPILE_OPT IDL2
   ENVI, /RESTORE_BASE_SAVE_FILES
@@ -13,8 +13,8 @@ PRO nc2tif
 
   ;Define the air pollutant (e.g., PM1, PM2.5, PM10, O3, NO2, SO, and CO)
   AP = 'PM2.5'
-  ;Define the spatial resolution (e.g.,0.01°*0.01°)
-  SP = 0.01
+  ;Define the spatial resolution (e.g.,0.1°)
+  SP = 0.1
 
   Files = FILE_SEARCH(WorkDir + '*.nc');
   N = N_ELEMENTS(Files)
@@ -22,8 +22,8 @@ PRO nc2tif
     File = Files[j]
     cdfid = NCDF_OPEN(File,/nowrite)
     varid = NCDF_VARID(cdfid,AP)
-    Latid = NCDF_VARID(cdfid,'Lat')
-    Lonid = NCDF_VARID(cdfid,'Lon')
+    Latid = NCDF_VARID(cdfid,'lat')
+    Lonid = NCDF_VARID(cdfid,'lon')
     IF varid EQ -1 THEN Continue
     NCDF_VARGET,cdfid,varid,data
     NCDF_VARGET,cdfid,Latid,Lat
@@ -31,7 +31,7 @@ PRO nc2tif
     NCDF_CLOSE,cdfid
     pos = STRPOS(FILE_BASENAME(File),'.nc')
     str = STRMID(FILE_BASENAME(File),0,pos)
-    out_name = out_dir + str + '.img'
+    out_name = out_dir + str + '.img'    
     PRINT,out_name
     OPENW,LUN,out_name,/GET_LUN
     WRITEU,LUN,data
@@ -43,5 +43,5 @@ PRO nc2tif
       interleave=0,offset=0,map_info=map_info,/WRITE
     FREE_LUN,LUN
   ENDFOR
-
+  
 END

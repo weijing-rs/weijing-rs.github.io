@@ -9,19 +9,19 @@ from osgeo import osr
 import gdal
 
 NClist = glob(r'D:\xx\*.nc')
-OutPath = r'D:\xx\tif'
+OutPath = r'D:\xx'
 
 for i in NClist:
     nc_obj = Dataset(i)
     fname = os.path.basename(i).split('.nc')[0]
     dictk = [v for v in nc_obj.variables.keys()] 
-    arr = nc_obj.variables[dictk[0]][:]
+    arr = nc_obj.variables[dictk[2]][:]
     result = np.zeros((arr.shape))
     c = arr.shape[1]
     for i in range(c):
         result[:,i] = np.array(list(arr[:,i].data)[::-1])        
-    lat= nc_obj.variables['Lat'][:]
-    lon= nc_obj.variables['Lon'][:]
+    lat= nc_obj.variables['lat'][:]
+    lon= nc_obj.variables['lon'][:]
     LonMin,LatMax,LonMax,LatMin = lon.min(),lat.max(),lon.max(),lat.min()    
     N_Lat = len(lat) 
     N_Lon = len(lon)
@@ -33,7 +33,7 @@ for i in NClist:
     geotransform = (LonMin,Lon_Res,0,LatMin-Lat_Res,0,Lat_Res)
     outRaster.SetGeoTransform(geotransform)    
     srs = osr.SpatialReference()
-    srs.ImportFromEPSG(4326)
+    srs.SetWellKnownGeogCS('WGS84')
     outRaster.SetProjection(srs.ExportToWkt())
     outRaster.GetRasterBand(1).WriteArray(result)
     outRaster.FlushCache()
