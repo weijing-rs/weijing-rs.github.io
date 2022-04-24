@@ -18,7 +18,7 @@ files <- list.files(WorkPath,pattern = "*.nc")
 for (i in 1:length(files)) {
   file = paste0(WorkPath,files[i])
   nc2raster = raster(file,varname=AP,band=1)
-  out_file <- paste0(str_split(file,".nc")[[1]][1],'.tif')
+  out_file <- paste0(strsplit(file,".nc")[[1]][1],'.tif')
   writeRaster(nc2raster,out_file,format='GTiff',overwrite=TRUE)
   print(paste(out_file,'Finished'))
 }
