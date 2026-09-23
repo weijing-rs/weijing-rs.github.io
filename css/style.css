@@ -1,0 +1,440 @@
+/* ==========================================================================
+   Remote Sensing Researcher Theme — Bootstrap 5
+   Earth-observation inspired: deep space navy, orbital teal/green accents,
+   satellite flight-deck motifs. Fonts via Google CDN with system fallbacks.
+   ========================================================================== */
+
+:root {
+  --rs-space-950: #07090f;
+  --rs-space-900: #0b1220;
+  --rs-space-800: #111a2e;
+  --rs-space-700: #1a2740;
+  --rs-navy: #14213d;
+  --rs-teal: #2dd4bf;
+  --rs-teal-600: #14b8a6;
+  --rs-green: #34d399;
+  --rs-gold: #fcd34d;
+  --rs-ink: #1f2937;
+  --rs-ink-soft: #4b5563;
+  --rs-muted: #6b7280;
+  --rs-bg: #f4f7fa;
+  --rs-paper: #ffffff;
+  --rs-line: #e3e9f0;
+  --rs-shadow: 0 10px 30px rgba(9, 18, 32, 0.10);
+  --rs-shadow-sm: 0 4px 14px rgba(9, 18, 32, 0.08);
+  --rs-font: "Inter", "Noto Sans SC", "Segoe UI", "PingFang SC",
+    "Microsoft YaHei", sans-serif;
+  --rs-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--rs-teal) var(--rs-bg);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--rs-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--rs-teal), var(--rs-green));
+  border-radius: 5px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--rs-font);
+  background: var(--rs-bg);
+  color: var(--rs-ink);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--rs-teal-600);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+a:hover {
+  color: var(--rs-space-800);
+  text-decoration: underline;
+}
+
+/* ===== Navbar ========================================================= */
+
+.rs-navbar {
+  background: rgba(7, 9, 15, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(45, 212, 191, 0.25);
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+}
+
+.rs-navbar .navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: 1.15rem;
+}
+.rs-navbar .navbar-brand:hover {
+  color: var(--rs-teal);
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  color: var(--rs-space-950);
+  background: linear-gradient(135deg, var(--rs-teal), var(--rs-green));
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.2);
+  font-size: 1rem;
+}
+
+.rs-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.85rem !important;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+}
+.rs-navbar .nav-link .nav-icon {
+  font-size: 0.85rem;
+}
+.rs-navbar .nav-link:hover {
+  color: #fff;
+  background: rgba(45, 212, 191, 0.12);
+  text-decoration: none;
+}
+.rs-navbar .nav-item.active .nav-link {
+  color: #fff;
+  background: linear-gradient(
+    135deg,
+    rgba(45, 212, 191, 0.25),
+    rgba(52, 211, 153, 0.14)
+  );
+  box-shadow: inset 0 0 0 1px rgba(45, 212, 191, 0.35);
+}
+
+.lang-switch {
+  border-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  font-weight: 600;
+  padding: 0.35rem 1rem;
+}
+.lang-switch:hover {
+  background: var(--rs-teal);
+  border-color: var(--rs-teal);
+  color: var(--rs-space-950);
+  text-decoration: none;
+}
+
+.rs-navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.rs-navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+@media (max-width: 991.98px) {
+  .rs-navbar .nav-link {
+    padding-left: 0.5rem !important;
+  }
+}
+
+/* ===== Hero band ====================================================== */
+
+.rs-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 64px 0 58px;
+  color: #fff;
+  background:
+    radial-gradient(60% 120% at 12% 0%, rgba(45, 212, 191, 0.18), transparent 60%),
+    radial-gradient(50% 110% at 88% 20%, rgba(52, 211, 153, 0.16), transparent 55%),
+    radial-gradient(80% 140% at 50% 120%, rgba(20, 33, 61, 0.9), transparent 70%),
+    linear-gradient(160deg, #0b1220 0%, #111a2e 55%, #14213d 100%);
+  border-bottom: 1px solid rgba(45, 212, 191, 0.3);
+}
+
+.rs-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(45, 212, 191, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(45, 212, 191, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 95%);
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 95%);
+  pointer-events: none;
+}
+
+.rs-hero-title {
+  margin: 0;
+  font-size: clamp(1.9rem, 4.4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: linear-gradient(90deg, #ffffff 20%, var(--rs-teal) 70%, var(--rs-green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(45, 212, 191, 0.25);
+}
+
+.rs-hero-sub {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.02rem;
+  font-weight: 400;
+}
+
+.rs-hero-grid {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+  color: rgba(45, 212, 191, 0.28);
+  font-family: var(--rs-mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+}
+
+/* ===== Main ============================================================ */
+
+.rs-main {
+  min-height: 60vh;
+}
+
+.rs-main .container {
+  background: transparent;
+}
+
+.rs-main p {
+  line-height: 1.8;
+}
+
+/* ===== Profile card (home) ============================================ */
+
+.rs-profile-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--rs-shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.rs-profile-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--rs-shadow);
+}
+
+.profile-photo {
+  position: relative;
+  background: var(--rs-space-900);
+}
+.profile-photo img {
+  width: 100%;
+  display: block;
+}
+
+.profile-photo-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.profile-photo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(7, 9, 15, 0.55);
+  backdrop-filter: blur(4px);
+  transition: background 0.15s ease;
+}
+.profile-photo-btn:hover {
+  background: var(--rs-teal);
+  color: var(--rs-space-950);
+}
+
+.rs-profile-card .card-title {
+  color: var(--rs-space-800);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+  text-align: center;
+}
+.rs-profile-card .card-text {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  text-align: center;
+}
+.rs-profile-card .card-body {
+  padding: 20px 18px 24px;
+}
+
+.rs-intro {
+  display: flow-root;
+}
+.rs-intro .rs-profile-float {
+  margin-bottom: 1.25rem;
+}
+@media (min-width: 992px) {
+  .rs-intro .rs-profile-float {
+    float: left;
+    width: 32%;
+    margin: 0 2% 1.25rem 0;
+  }
+}
+@media (min-width: 1200px) {
+  .rs-intro .rs-profile-float {
+    width: 26%;
+    margin-right: 2.5%;
+  }
+}
+
+/* ===== People page ===================================================== */
+
+.rs-people-section {
+  margin-top: 0.75rem;
+}
+.rs-people-card {
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.rs-people-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--rs-shadow);
+}
+.rs-people-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+  background: var(--rs-space-900);
+}
+.rs-people-body {
+  padding: 8px 6px 10px;
+  text-align: center;
+}
+.rs-people-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--rs-space-800);
+  overflow-wrap: anywhere;
+}
+.rs-people-role {
+  font-size: 0.78rem;
+  color: var(--rs-muted);
+  margin-top: 2px;
+  overflow-wrap: anywhere;
+}
+
+/* ===== Section headings =============================================== */
+
+.rs-main p strong {
+  color: var(--rs-space-800);
+}
+
+.container p strong font[size="4"],
+.container p strong font[size="5"] {
+  color: var(--rs-space-800);
+  letter-spacing: 0.03em;
+}
+
+/* Section labels such as "Biography", "Work Experience" */
+.rs-main .container p > strong {
+  font-weight: 700;
+}
+
+/* ===== Publication / list content ===================================== */
+
+.rs-main ul {
+  padding-left: 1.4rem;
+}
+.rs-main ul li {
+  margin-bottom: 0.55rem;
+}
+.rs-main ul li p {
+  margin-bottom: 0.35rem;
+}
+.rs-main em {
+  font-style: italic;
+}
+
+.rs-main font[color="red"] {
+  color: #d93535;
+}
+.rs-main font[color="green"] {
+  color: var(--rs-teal-600);
+}
+
+/* ===== News page ======================================================= */
+
+.container #News p,
+.container #News_cn p {
+  position: relative;
+  padding: 12px 18px 12px 26px;
+  background: var(--rs-paper);
+  border: 1px solid var(--rs-line);
+  border-left: 4px solid var(--rs-teal);
+  border-radius: 10px;
+  box-shadow: var(--rs-shadow-sm);
+  margin-bottom: 10px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.container #News p:hover,
+.container #News_cn p:hover {
+  transform: translateX(3px);
+  box-shadow: var(--rs-shadow);
+}
+
+/* ===== Footer ========================================================== */
+
+.rs-footer {
+  margin-top: 56px;
+  padding: 22px 0;
+  color: rgba(255, 255, 255, 0.82);
+  background: linear-gradient(160deg, var(--rs-space-950) 0%, var(--rs-space-900) 60%, var(--rs-space-800) 100%);
+  border-top: 1px solid rgba(45, 212, 191, 0.3);
+}
+.rs-footer-legal {
+  font-weight: 500;
+}
+.rs-footer-legal a {
+  color: var(--rs-teal);
+}
+.rs-footer-meta {
+  font-family: var(--rs-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: rgba(45, 212, 191, 0.75);
+}
+
+/* ===== Responsive ====================================================== */
+
+@media (max-width: 767.98px) {
+  .rs-hero {
+    padding: 44px 0 40px;
+  }
+}

@@ -1,51 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Jing Wei</title>
-  <link rel="stylesheet" href="mdui/css/mdui.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jing Wei · Data Products</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="mdui-appbar-with-toolbar mdui-appbar-with-tab-larger mdui-bottom-nav-fixed">
-
-<div class="mdui-appbar mdui-appbar-fixed">
-  <div class="mdui-toolbar mdui-color-indigo">
-    <a href="index.html" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">public</i></a>
-    <a href="javascript:;" class="mdui-typo-title">Jing Wei</a>
-    <!-- <a href="https://scholar.google.com.hk/citations?user=sc0SyzUAAAAJ&hl=zh-CN" class="mdui-typo-subtitle">Google</a> -->
-    <!-- <a href="https://orcid.org/0000-0002-8803-7056" class="mdui-typo-subtitle">ORCID</a> -->
-    <div class="mdui-toolbar-spacer"></div>
-    <a href="product_cn.html" >Chinese</a>
+<body>
+<nav class="navbar navbar-expand-lg rs-navbar sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <span class="brand-mark"><i class="bi bi-globe-americas"></i></span>
+      <span class="brand-text">Jing Wei</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html"><i class="bi bi-house-door nav-icon me-1"></i>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="publication.html"><i class="bi bi-journal-text nav-icon me-1"></i>Publications</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="people.html"><i class="bi bi-people nav-icon me-1"></i>People</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="research.html"><i class="bi bi-radar nav-icon me-1"></i>Research</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="product.html"><i class="bi bi-box2 nav-icon me-1"></i>Data Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="news.html"><i class="bi bi-newspaper nav-icon me-1"></i>News</a>
+        </li>
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-outline-light btn-sm lang-switch" href="product_cn.html">中文</a>
+        </li>
+      </ul>
+    </div>
   </div>
-  <div class="mdui-tab mdui-color-indigo mdui-tab-centered" mdui-tab>
-    <a href="index.html" class="mdui-ripple mdui-ripple-white">
-      <i class="mdui-icon material-icons">&#xe88a;</i>
-      <label>Home</label>
-    </a>
-    <a href="publication.html" class="mdui-ripple mdui-ripple-white">
-      <i class="mdui-icon material-icons">&#xe866;</i>
-      <label>Publication</label>
-    </a>
-    <a href="presentation.html" class="mdui-ripple mdui-ripple-white">
-      <i class="mdui-icon material-icons">&#xe838;</i>
-      <label>Presentation</label>
-    </a>
-    <a href="research.html" class="mdui-ripple mdui-ripple-white">
-      <i class="mdui-icon material-icons">&#xe1bd;</i>
-      <label>Research</label>
-    </a>
-    <a href="#Product" class="mdui-ripple mdui-ripple-white mdui-tab-active">
-      <i class="mdui-icon material-icons">&#xe2c7;</i>
-      <label>Product</label>
-      <a href="news.html" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">&#xe05e;</i>
-        <label>News</label>
-    </a>
-  </div>
-</div>
+</nav>
 
-<div class="mdui-container doc-container">
-  <div id="Product" style=" font-size:16px;"> 
+<header class="rs-hero">
+  <div class="rs-hero-grid" aria-hidden="true"></div>
+  <div class="rs-hero-pulse" aria-hidden="true"></div>
+  <div class="container position-relative">
+    <h1 class="rs-hero-title">Data Products</h1>
+    <p class="rs-hero-sub mb-0">Long-term, full-coverage, high-resolution air pollutant datasets</p>
+  </div>
+</header>
+
+<main class="rs-main">
+<div class="container py-4">
+  <div id="Product"> 
     <p>&nbsp;</p>
     <p style="text-align:center;"> <strong><font size="4.8"><a href='https://zenodo.org/communities/ghap/' target='_blank' class='url'>GlobalHighAirPollutants (GHAP)</a> | <a href='https://zenodo.org/communities/chap/' target='_blank' class='url'>ChinaHighAirPollutants (CHAP)</a> | <a href='https://zenodo.org/communities/ushap/' target='_blank' class='url'>USHighAirPollutants (USHAP)</a></font></strong></p>   
     <p>&nbsp;</p>
@@ -364,9 +379,17 @@
 
 
 </div>
-<div class="mdui-bottom-nav mdui-bottom-nav-text-auto mdui-color-indigo">
-  <a href="https://weijing-rs.github.io">Copyright © 2023 Jing Wei</a>
-</div>
-<script src="mdui/js/mdui.min.js"></script>
+
+</main>
+
+<footer class="rs-footer">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+    <span class="rs-footer-legal">Copyright © <span class="rs-footer-year">2023</span> Jing Wei</span>
+    <span class="rs-footer-meta">Earth Observation · Atmospheric Remote Sensing · AI</span>
+  </div>
+</footer>
+
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script>document.querySelectorAll('.rs-footer-year').forEach(function (y) { y.textContent = new Date().getFullYear(); });</script>
 </body>
 </html>

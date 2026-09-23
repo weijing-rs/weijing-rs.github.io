@@ -1,53 +1,66 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="zh">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>韦 晶</title>
-  <link rel="stylesheet" href="mdui/css/mdui.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>韦 晶 · 最新动态</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
-<body class="mdui-appbar-with-toolbar mdui-appbar-with-tab-larger mdui-bottom-nav-fixed">
-
-  <div class="mdui-appbar mdui-appbar-fixed">
-    <div class="mdui-toolbar mdui-color-indigo">
-      <a href="index_cn.html" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">public</i></a>
-      <a href="javascript:;" class="mdui-typo-title">韦 晶</a>
-      <!-- <a href="https://scholar.google.com.hk/citations?user=sc0SyzUAAAAJ&hl=zh-CN" class="mdui-typo-subtitle">Google Scholar</a> -->
-      <!-- <a href="https://orcid.org/0000-0002-8803-7056" class="mdui-typo-subtitle">ORCID</a> -->
-      <div class="mdui-toolbar-spacer"></div>
-      <a href="news.html">English</a>
-    </div>
-    <div class="mdui-tab mdui-color-indigo mdui-tab-centered" mdui-tab>
-      <a href="index_cn.html" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">&#xe88a;</i>
-        <label>个人介绍</label>
-      </a>
-      <a href="publication_cn.html" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">&#xe866;</i>
-        <label>学术论文</label>
-      </a>
-      <a href="presentation_cn.html" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">&#xe838;</i>
-        <label>荣誉奖励</label>
-      </a>
-      <a href="research_cn.html" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">&#xe1bd;</i>
-        <label>项目经历</label>
-      </a>
-      <a href="product_cn.html" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">&#xe2c7;</i>
-        <label>数据产品</label>
-        <a href="#News" class="mdui-ripple mdui-ripple-white mdui-tab-active">
-          <i class="mdui-icon material-icons">&#xe05e;</i>
-          <label>最新动态</label>
-        </a>
+<body>
+<nav class="navbar navbar-expand-lg rs-navbar sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index_cn.html">
+      <span class="brand-mark"><i class="bi bi-globe-americas"></i></span>
+      <span class="brand-text">韦 晶</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link" href="index_cn.html"><i class="bi bi-house-door nav-icon me-1"></i>个人介绍</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="publication_cn.html"><i class="bi bi-journal-text nav-icon me-1"></i>学术论文</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="people_cn.html"><i class="bi bi-people nav-icon me-1"></i>团队成员</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="research_cn.html"><i class="bi bi-briefcase nav-icon me-1"></i>项目经历</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="product_cn.html"><i class="bi bi-box2 nav-icon me-1"></i>数据产品</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="news_cn.html"><i class="bi bi-newspaper nav-icon me-1"></i>最新动态</a>
+        </li>
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-outline-light btn-sm lang-switch" href="news.html">English</a>
+        </li>
+      </ul>
     </div>
   </div>
+</nav>
 
-  <div class="mdui-container doc-container">
-    <div id="News" style=" font-size:16px;">
+<header class="rs-hero">
+  <div class="rs-hero-grid" aria-hidden="true"></div>
+  <div class="rs-hero-pulse" aria-hidden="true"></div>
+  <div class="container position-relative">
+    <h1 class="rs-hero-title">最新动态</h1>
+    <p class="rs-hero-sub mb-0">最新动态与官方通知</p>
+  </div>
+</header>
+
+<main class="rs-main">
+<div class="container py-4">
+    <div id="News">
       <p>&nbsp;</p>
       <p>2023-06-20 Dr. Jing Wei was apponited to the Youth Editor for the journal <a href="https://www.cell.com/the-innovation/home"> <strong>The Innovation</strong></a> !</p>            
       <p>2023-05-26 Our <a href="https://doi.org/10.1016/j.scitotenv.2022.159104"><strong>Science of The Total Environment</strong></a> paper has been selected as <strong>ESI Highly Cited (Top < 1%) Paper</strong> !</p>      
@@ -279,10 +292,17 @@
     </div>
 
   </div>
-  <div class="mdui-bottom-nav mdui-bottom-nav-text-auto mdui-color-indigo">
-    <a href="https://weijing-rs.github.io">版权所有 © 2020 韦 晶</a>
-  </div>
-  <script src="mdui/js/mdui.min.js"></script>
-</body>
+  
+</main>
 
+<footer class="rs-footer">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+    <span class="rs-footer-legal">版权所有 © <span class="rs-footer-year">2020</span> 韦 晶</span>
+    <span class="rs-footer-meta">大气遥感 · 地球观测 · 人工智能</span>
+  </div>
+</footer>
+
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script>document.querySelectorAll('.rs-footer-year').forEach(function (y) { y.textContent = new Date().getFullYear(); });</script>
+</body>
 </html>
