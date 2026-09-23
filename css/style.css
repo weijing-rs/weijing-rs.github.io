@@ -328,9 +328,9 @@ a:hover {
 .rs-people-photo {
   display: block;
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  object-position: center top;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  object-position: center;
   background: var(--rs-space-900);
 }
 .rs-people-body {
