@@ -316,6 +316,9 @@ a:hover {
 .rs-people-section {
   margin-top: 0.75rem;
 }
+.rs-people-section + p {
+  margin-top: 1.75rem;
+}
 .rs-people-card {
   border-radius: 14px;
   overflow: hidden;
@@ -329,7 +332,7 @@ a:hover {
   display: block;
   width: 100%;
   aspect-ratio: 3 / 4;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   background: var(--rs-space-900);
 }
